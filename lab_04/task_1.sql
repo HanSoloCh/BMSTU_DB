@@ -1,17 +1,18 @@
 -- Определяемая  пользователем скалярная функция
-CREATE OR REPLACE FUNCTION calc_factorial(n INTEGER)
-RETURNS BIGINT
+CREATE OR REPLACE FUNCTION get_age(birth DATE)
+RETURNS INT
+LANGUAGE plpgsql
 AS $$
-    if n < 0:
-        raise ValueError("n must be a non-negative integer")
-    elif n == 0:
-        return 1
-    else:
-        result = 1
-        for i in range(1, n + 1):
-            result *= i
-        return result
-$$ LANGUAGE plpython3u;
+BEGIN
+  -- Вычисляем возраст, используя текущую дату как дату смерти
+  RETURN EXTRACT(YEAR FROM age(CURRENT_DATE, birth));
+END;
+$$;
+
 
 -- Тест
-SELECT calc_factorial(5);
+SELECT 
+	author_id,
+	birth_date,
+	get_age(birth_date) as age
+FROM authors;

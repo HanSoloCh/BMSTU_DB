@@ -9,14 +9,14 @@ CREATE TABLE IF NOT EXISTS editors_json
 INSERT INTO editors_json
 VALUES
 ('{ "surname" : "Новиков",
-    "firs_name" : "Артём",
+    "first_name" : "Артём",
     "second_name" : "Андреевич",
     "experience" : 16,
 	"genre" : "Научная фантастика"
  }'
 ),
 ('{ "surname" : "Нисуев",
-    "firs_name" : "Нису",
+    "first_name" : "Нису",
     "second_name" : "Фелексович",
     "experience" : 0,
 	"genre" : "Триллер"
