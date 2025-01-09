@@ -9,7 +9,6 @@ BEGIN
 END;
 $$;
 
-
 -- Тест
 SELECT 
 	author_id,

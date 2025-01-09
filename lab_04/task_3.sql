@@ -18,7 +18,7 @@ $$ LANGUAGE plpython3u;
 
 
 -- Тест
-SELECT * FROM get_books_by_author));
+SELECT * FROM get_books_by_author(2);
 
 
 

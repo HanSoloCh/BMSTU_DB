@@ -12,7 +12,7 @@ FROM editors_json;
 -- Извлекаем фамилии (surname) и жанры (genre)
 SELECT 
     info->>'surname' AS surname,
-    info->>'genre' AS genre
+    info->>'experience' AS experience
 FROM editors_json;
      
 
